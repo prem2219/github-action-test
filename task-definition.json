@@ -8,7 +8,7 @@
           "logDriver": "awslogs",
           "secretOptions": null,
           "options": {
-            "awslogs-group": "/ecs/enigma-task",
+            "awslogs-group": "/ecs/ashu-task",
             "awslogs-region": "ap-south-1",
             "awslogs-stream-prefix": "ecs"
           }
@@ -16,7 +16,7 @@
         "entryPoint": null,
         "portMappings": [
           {
-            "hostPort": 0,
+            "hostPort": 80,
             "protocol": "tcp",
             "containerPort": 8080
           }
@@ -36,7 +36,7 @@
         "memoryReservation": 500,
         "volumesFrom": [],
         "stopTimeout": null,
-        "image": "147457583792.dkr.ecr.ap-south-1.amazonaws.com/enigma:develop",
+        "image": "147457583792.dkr.ecr.ap-south-1.amazonaws.com/ashu:develop",
         "startTimeout": null,
         "firelensConfiguration": null,
         "dependsOn": null,
@@ -53,13 +53,13 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "enigma-container"
+        "name": "ashu-container"
       }
     ],
     "placementConstraints": [],
     "memory": null,
     "taskRoleArn": "arn:aws:iam::147457583792:role/AWSECSTaskExecutionRole",
-    "family": "enigma-task",
+    "family": "ashu-task",
     "pidMode": null,
     "requiresCompatibilities": [
       "EC2"

@@ -56,7 +56,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: task-definition.json
-          container-name: enigma-container
+          container-name: ashu-container
           image: ${{ steps.build-image.outputs.image }}
 
       # Deploy Amazon ECS task definition
@@ -64,6 +64,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: enigma-service
+          service: ashu-service
           cluster: ashu
           wait-for-service-stability: true
